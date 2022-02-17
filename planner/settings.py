@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-1=-&fbii*l&*3iacivspl9%=ehm4_eitv!b0y=%u1-t%&#9^9r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'planner.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,3 +125,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Google API
+GOOGLE_CALENDAR_SCOPES = ['https://www.googleapis.com/auth/calendar']
