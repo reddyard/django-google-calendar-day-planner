@@ -2,6 +2,12 @@ from .forms import LoginForm
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.views.generic import TemplateView
+from allauth.socialaccount.providers.google import provider
+
+
+class AboutView(TemplateView):
+    template_name = "account/index.html"
 
 
 def login_view(request):
